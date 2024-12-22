@@ -1392,7 +1392,7 @@ void handlePostAcross(DvmhLoop *loop, const LoopBounds curLoopBounds[]) {
                         inWidths[j][1], outWidths[j][0], outWidths[j][1]);
             }
             if (loop->region) {
-                PushCurrentPurpose purpose(DvmhCopyingPurpose::dcpShadow);
+                PushCurrentPurpose purpose(DvmhCopyingPurpose::dcpAcross);
                 data->getActualEdges(roundedPart, inWidths, loop->region->canAddToActual(data, roundedPart));
                 data->getActualShadow(0, roundedPart, sdata->cornerFlag, outWidths, true);
             }

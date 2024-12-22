@@ -15,6 +15,9 @@ DvmhCopyingPurpose::Value DvmhCopyingPurpose::setCurrent(Value newVal, bool isSo
 dvmh_stat_metric_names DvmhCopyingPurpose::applyCurrent(dvmh_stat_metric_names defaultMetric) {
     dvmh_stat_metric_names reference;
     switch (currentVal) {
+        case dcpAcross:
+            reference = DVMH_STAT_METRIC_CPY_ACROSS_DTOH;
+            break;
         case dcpShadow:
             reference = DVMH_STAT_METRIC_CPY_SHADOW_DTOH;
             break;

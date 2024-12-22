@@ -32,7 +32,7 @@ namespace libdvmh {
 
 class DvmhCopyingPurpose {
 public:
-    enum Value {dcpNone, dcpShadow, dcpRemote, dcpRedistribute, dcpInRegion, dcpGetActual, dcpConsistent, dcpArrayCopy};
+    enum Value {dcpNone, dcpAcross, dcpShadow, dcpRemote, dcpRedistribute, dcpInRegion, dcpGetActual, dcpConsistent, dcpArrayCopy};
 public:
     static Value getCurrent() { return currentVal; }
     static bool isCurrentProductive() { return currentVal == dcpInRegion || currentVal == dcpGetActual; }

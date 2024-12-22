@@ -1284,7 +1284,7 @@ void DvmhLoop::getActualShadowsForAcrossOut() const {
         bool hasSomething = fillLoopDataRelations(localPlusShadow, data, forwardDirection, roundedPart, leftmostPart, rightmostPart);
         if (hasSomething) {
             fillAcrossInOutWidths(dataRank, sdata->shdWidths, forwardDirection, leftmostPart, rightmostPart, inWidths, outWidths);
-            PushCurrentPurpose purpose(DvmhCopyingPurpose::dcpShadow);
+            PushCurrentPurpose purpose(DvmhCopyingPurpose::dcpAcross);
             for (int j = 0; j < devicesCount; j++) {
                 if (rdata->getLocalPart(j)) {
                     data->getActualShadow(j, rdata->getLocalPart(j), sdata->cornerFlag, outWidths, true);
